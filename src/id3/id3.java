@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
+
+
 
 public class id3 {
 
@@ -16,6 +19,18 @@ public class id3 {
 		BufferedReader conteudoCSV = null;
 		String linha ="";
 		String csvSeparadorCampo = ";";
+		//Lista Inicial CE
+		List CE = new ArrayList();
+		for(int i=0; i< 14; i++) {
+			CE.add(i);			
+		  
+	}			
+		// Array de propriedades a serem testadas.  Definidas estaticamente 
+		String[] PR = { "HC", "GA","RE","DI" };
+		
+		
+		
+		
 		
 		ArrayList<Dados> listaDados = new ArrayList<>();
 		
@@ -41,6 +56,7 @@ public class id3 {
 				dt1.setDivida(dados[3]);
 				dt1.setGarantia(dados[4]);
 				listaDados.add(dt1);
+				//CE[i] = i;
 				
 				System.out.println("[Data = " + dados[0]
 						+ " , RISCO = " + dados[1]
@@ -65,11 +81,12 @@ public class id3 {
 			if(conteudoCSV != null) {
 				try {
 					conteudoCSV.close();
-					for(int i=0; i< listaDados.size(); i++) {
-						System.out.println(listaDados.get(i).getN());
-						System.out.println(listaDados.get(i).getDivida());
-						  
-					}
+//					for(int i=0; i< listaDados.size(); i++) {
+//						System.out.println(listaDados.get(i).getN());
+//						System.out.println(listaDados.get(i).getDivida());					
+//						  
+//					}
+					
 				}catch (IOException e) {
 					System.out.println("IO Erro : \n "+ e.getMessage());
 				}
