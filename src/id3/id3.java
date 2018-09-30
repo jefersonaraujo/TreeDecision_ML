@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class id3 {
 
@@ -16,7 +17,12 @@ public class id3 {
 		String linha ="";
 		String csvSeparadorCampo = ";";
 		
+		ArrayList<Dados> listaDados = new ArrayList<>();
+		
+
+		
 	
+		
 	
 	
 		induzir();		
@@ -26,6 +32,14 @@ public class id3 {
 			conteudoCSV = new BufferedReader(new FileReader(csvArquivo));
 			while ((linha = conteudoCSV.readLine()) !=null ) {
 				String [] dados = linha.split(csvSeparadorCampo);
+				Dados dt1 =  new Dados();
+				dt1.setN(dados[0]);
+				dt1.setRisco(dados[1]);
+				dt1.setHc(dados[2]);
+				dt1.setDivida(dados[3]);
+				dt1.setGarantia(dados[4]);
+				listaDados.add(dt1);
+				
 				System.out.println("[Data = " + dados[0]
 						+ " , RISCO = " + dados[1]
 					    + " , HCREDITO = " + dados[2]
@@ -48,6 +62,11 @@ public class id3 {
 			if(conteudoCSV != null) {
 				try {
 					conteudoCSV.close();
+					for(int i=0; i< listaDados.size(); i++) {
+						System.out.println(listaDados.get(i).getN());
+						System.out.println(listaDados.get(i).getDivida());
+						
+					}
 				}catch (IOException e) {
 					System.out.println("IO Erro : \n "+ e.getMessage());
 				}
@@ -59,40 +78,6 @@ public class id3 {
 		System.out.println("Teste");
 		
 	}
-	public class Dados {
-	    private String risco,hc,divida,garantia;
-
-		public String getRisco() {
-			return risco;
-		}
-
-		public void setRisco(String risco) {
-			this.risco = risco;
-		}
-
-		public String getHc() {
-			return hc;
-		}
-
-		public void setHc(String hc) {
-			this.hc = hc;
-		}
-
-		public String getDivida() {
-			return divida;
-		}
-
-		public void setDivida(String divida) {
-			this.divida = divida;
-		}
-
-		public String getGarantia() {
-			return garantia;
-		}
-
-		public void setGarantia(String garantia) {
-			this.garantia = garantia;
-		}
-
-	}
+	
+	
 }
