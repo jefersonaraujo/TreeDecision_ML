@@ -1,17 +1,9 @@
 package id3;
 
 public class Dados {
-    private String N,risco,hc,divida,garantia;
+    private String risco,hc,divida,garantia;
+    private int N;
     
-   
-	public String getN() {
-		return N;
-	}
-
-	public void setN(String n) {
-		N = n;
-	}
-
 	public String getRisco() {
 		return risco;
 	}
@@ -42,6 +34,14 @@ public class Dados {
 
 	public void setGarantia(String garantia) {
 		this.garantia = garantia;
+	}
+
+	public int getN() {
+		return N;
+	}
+
+	public void setN(int n) {
+		N = n;
 	}
 
 }

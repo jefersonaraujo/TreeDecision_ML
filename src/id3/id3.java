@@ -30,10 +30,12 @@ public class id3 {
 		
 		try {
 			conteudoCSV = new BufferedReader(new FileReader(csvArquivo));
+			int i=1;
 			while ((linha = conteudoCSV.readLine()) !=null ) {
+				
 				String [] dados = linha.split(csvSeparadorCampo);
 				Dados dt1 =  new Dados();
-				dt1.setN(dados[0]);
+				dt1.setN(i);
 				dt1.setRisco(dados[1]);
 				dt1.setHc(dados[2]);
 				dt1.setDivida(dados[3]);
@@ -49,6 +51,7 @@ public class id3 {
 					    + "]"
 						
 						);
+				i++;
 				
 			}
 		}catch (FileNotFoundException e) {
@@ -65,7 +68,7 @@ public class id3 {
 					for(int i=0; i< listaDados.size(); i++) {
 						System.out.println(listaDados.get(i).getN());
 						System.out.println(listaDados.get(i).getDivida());
-						
+						  
 					}
 				}catch (IOException e) {
 					System.out.println("IO Erro : \n "+ e.getMessage());
