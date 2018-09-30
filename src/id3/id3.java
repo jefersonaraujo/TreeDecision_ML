@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,28 +20,25 @@ public class id3 {
 		BufferedReader conteudoCSV = null;
 		String linha ="";
 		String csvSeparadorCampo = ";";
-		//Lista Inicial CE
-		List CE = new ArrayList();
-		for(int i=0; i< 14; i++) {
-			CE.add(i);			
-		  
-	}			
-		// Array de propriedades a serem testadas.  Definidas estaticamente 
-		String[] PR = { "HC", "GA","RE","DI" };
-		
-		
-		
-		
-		
 		ArrayList<Dados> listaDados = new ArrayList<>();
 		
-
+		//Lista Inicial CE
+		List<Integer> CE = new ArrayList<Integer>();
+		for(int i=0; i< 14; i++) {CE.add(i);}		
+		
+		// Array de propriedades a serem testadas.  Definidas estaticamente 
+		List<String> PR = new ArrayList<String>();
+		PR.add("HC");
+		PR.add("GA");
+		PR.add("RE");
+		PR.add("DI");	
+		
 		
 	
 		
 	
 	
-		induzir();		
+		induzir_arvore(CE, PR);		
 		
 		
 		try {
@@ -94,7 +92,7 @@ public class id3 {
 		}
 	}
 
-	private static void induzir() {
+	private static void induzir_arvore(List ces, List prs) {
 		System.out.println("Teste");
 		
 	}
