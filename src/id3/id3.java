@@ -124,16 +124,18 @@ public class id3 {
 					for(int i=0; i < ces.size(); i++) {						
 						if(!v_aux.contains(ces.get(i).getHc())) {
 							v_aux.add(ces.get(i).getHc());
-						}
-						
-						
-//						if(ces.get(i).getHc().equals(ces.get(i).getHc())) {
-//							System.out.println();
-//							
-//						}
-						
-					}
+						}						
+					}// fim "for"
+					
 					System.out.println(v_aux.toString());
+					
+					System.out.println("Crie um ramo da arvore rotulado com V");
+					System.out.println("Pego o primeiro = " + v_aux.get(0));
+					System.out.println(P + "-->" + v_aux.get(0));
+					v_aux.remove(0);//remover da list
+					//System.out.println(v_aux.toString()); //lista de
+					//contrua particao com os elementos de contunto exempo com valores V para propriedade P
+					
 				}
 				
 			}
