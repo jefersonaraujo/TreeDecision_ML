@@ -105,9 +105,16 @@ public class id3 {
 		Util u = new Util();
 		Boolean res=  u.CompararClasses(ces);
 		if(res) {
-			System.out.println("Todos Elementos de Classes iguais !");
+			System.out.println("Todos Elementos de Classes iguais !\n Retornar um no folha rotulado com essa classe !!");
 		}else {
 			System.out.println("Existem elementos diferentes !");
+			if(pR.isEmpty()) {
+				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
+			}else {
+				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
+				String P = (String) pR.get(0);
+				System.out.println("Selecionado prop. = " + P);
+			}
 		}
 		ArrayList uniqueList = (ArrayList) classe.stream().distinct().collect(Collectors.toList());
 		String collectAll = classe.stream().collect(Collectors.joining(", "));
