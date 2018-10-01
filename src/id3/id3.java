@@ -103,7 +103,12 @@ public class id3 {
 			
 		}
 		Util u = new Util();
-		u.CompararClasses(ces);
+		Boolean res=  u.CompararClasses(ces);
+		if(res) {
+			System.out.println("Todos Elementos de Classes iguais !");
+		}else {
+			System.out.println("Existem elementos diferentes !");
+		}
 		ArrayList uniqueList = (ArrayList) classe.stream().distinct().collect(Collectors.toList());
 		String collectAll = classe.stream().collect(Collectors.joining(", "));
 		System.out.println(collectAll); //=> CO2, CH4, SO2, CO2, CH4 etc..
