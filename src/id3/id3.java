@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 
@@ -94,14 +95,24 @@ public class id3 {
 	}
 
 	private static void induzir_arvore(List<Dados> ces, List pR) {
-		
-		for(int i=0; i < pR.size(); i++) {
-			System.out.println(pR.get(i));
-		}
+		//classe		
+		List<String> classe = new ArrayList<String>();
 		for(int i=0; i < ces.size(); i++) {
-			System.out.println(ces.get(i).getRisco());
+			//System.out.println(ces.get(i).getRisco());
+			//classe.add(ces.get(i).getRisco());
 			
 		}
+		Util u = new Util();
+		u.CompararClasses(ces);
+		ArrayList uniqueList = (ArrayList) classe.stream().distinct().collect(Collectors.toList());
+		String collectAll = classe.stream().collect(Collectors.joining(", "));
+		System.out.println(collectAll); //=> CO2, CH4, SO2, CO2, CH4 etc..
+		String collectDistinct = classe.stream().collect(Collectors.joining(", "));
+		System.out.println(collectDistinct); //=> CO2, CH4, SO2
+		for(int i=0; i < pR.size(); i++) {
+			//System.out.println(pR.get(i));
+		}
+		
 		
 		
 		
