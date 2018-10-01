@@ -115,16 +115,30 @@ public class id3 {
 				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
 				String P = (String) pR.get(0);
 				System.out.println("Selecionado prop. = " + P);
+				pR.remove(0);
+				System.out.println("Removido propriedade = " + pR.toString());
+				List<String> v_aux = new ArrayList<String>();
+				List<Dados> particao_aux = new ArrayList<Dados>();
+				if(P.equals("HC")) {
+					//para cada valor V de P
+					for(int i=0; i < ces.size(); i++) {						
+						if(!v_aux.contains(ces.get(i).getHc())) {
+							v_aux.add(ces.get(i).getHc());
+						}
+						
+						
+//						if(ces.get(i).getHc().equals(ces.get(i).getHc())) {
+//							System.out.println();
+//							
+//						}
+						
+					}
+					System.out.println(v_aux.toString());
+				}
+				
 			}
 		}
-		ArrayList uniqueList = (ArrayList) classe.stream().distinct().collect(Collectors.toList());
-		String collectAll = classe.stream().collect(Collectors.joining(", "));
-		System.out.println(collectAll); //=> CO2, CH4, SO2, CO2, CH4 etc..
-		String collectDistinct = classe.stream().collect(Collectors.joining(", "));
-		System.out.println(collectDistinct); //=> CO2, CH4, SO2
-		for(int i=0; i < pR.size(); i++) {
-			//System.out.println(pR.get(i));
-		}
+	
 		
 		
 		
