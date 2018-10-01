@@ -38,7 +38,7 @@ public class id3 {
 		
 	
 	
-		induzir_arvore(CE, PR);		
+			
 		
 		
 		try {
@@ -90,10 +90,21 @@ public class id3 {
 				}
 			}
 		}
+		induzir_arvore(listaDados, PR);	
 	}
 
-	private static void induzir_arvore(List ces, List prs) {
-		System.out.println("Teste");
+	private static void induzir_arvore(List<Dados> ces, List pR) {
+		
+		for(int i=0; i < pR.size(); i++) {
+			System.out.println(pR.get(i));
+		}
+		for(int i=0; i < ces.size(); i++) {
+			System.out.println(ces.get(i).getRisco());
+			
+		}
+		
+		
+		
 		
 	}
 	
