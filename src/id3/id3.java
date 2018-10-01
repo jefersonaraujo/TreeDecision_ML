@@ -128,6 +128,7 @@ public class id3 {
 					}// fim "for"
 					
 					System.out.println(v_aux.toString());
+					//System.out.println(pR.toString());
 					
 					System.out.println("Crie um ramo da arvore rotulado com V");
 					String V = v_aux.get(0);
@@ -138,10 +139,19 @@ public class id3 {
 					//contrua particao com os elementos de contunto exempo com valores V para propriedade P
 					for(int i=0;i < ces.size(); i++) {
 						if(ces.get(i).getHc().equals(V)) {
+							//particoes
 							System.out.println(ces.get(i).getN());
+							particao_aux.add(ces.get(i));
 							
 						}
+						
 					}
+					for(int i=0; i < particao_aux.size(); i++) {	
+						System.out.println(particao_aux.get(i).getRisco());
+											
+					}// fim "for"
+					
+					
 					
 				}
 				
