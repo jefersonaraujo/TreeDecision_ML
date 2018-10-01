@@ -15,9 +15,10 @@ public class id3 {
 
 	public static void main(String[] args) {
 		//System.out.println("hello world ! ");
-		//objetivo é ler um arquivo .csv e "montar" uma arvore de decicao 
+		//objetivo ï¿½ ler um arquivo .csv e "montar" uma arvore de decicao 
 		
-		String csvArquivo ="C:\\Users\\ghost\\dados.csv";
+		//String csvArquivo ="C:\\Users\\ghost\\dados.csv";
+		String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
 		BufferedReader conteudoCSV = null;
 		String linha ="";
 		String csvSeparadorCampo = ";";
