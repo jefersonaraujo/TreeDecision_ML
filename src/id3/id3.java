@@ -145,11 +145,13 @@ public class id3 {
 							
 						}
 						
-					}
+					}//exibindo particoes montadas.
 					for(int i=0; i < particao_aux.size(); i++) {	
 						System.out.println(particao_aux.get(i).getRisco());
 											
 					}// fim "for"
+					
+					
 					
 					
 					
