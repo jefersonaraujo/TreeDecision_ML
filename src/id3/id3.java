@@ -151,7 +151,7 @@ public class id3 {
 											
 					}// fim "for"
 					
-					
+					induzir_arvore(particao_aux, v_aux);
 					
 					
 					
