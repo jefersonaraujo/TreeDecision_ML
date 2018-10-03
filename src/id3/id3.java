@@ -181,8 +181,8 @@ public class id3 {
 						System.out.println(tt.get(i).getNome() +"---> "
 								);
 						for(int j=0; j < tt.get(i).ramos.size();j++) {
-							System.out.println(tt.get(i).ramos.size());
-							System.out.println( tt.get(i).ramos.get(j).getRotulo());
+							System.out.println(tt.get(i).ramos.get(i).getRotulo());
+							System.out.println( tt.get(i).ramos.get(j).getRamo().get(j).getNome());
 							
 						}
 						
