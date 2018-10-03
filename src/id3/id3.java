@@ -154,24 +154,35 @@ public class id3 {
 					induzir_arvore(particao_aux, v_aux);
 					
 					System.out.println("Teste estrutura manual");
-					Tree t = new Tree();
-					t.setNome("TEST");
-					t.setRaiz("HC");
+					ArrayList<Tree> tt = new ArrayList<Tree>();
+					//ArrayList<Ramo> rr = new ArrayList<Ramo>();
 					
 					Ramo r = new Ramo();
-					r.setRotulo("RUIM");
-					r.setRamo("GA");
-					t.ramos.add(r);
-					ArrayList<Tree> tt = new ArrayList<Tree>();
-					ArrayList<Ramo> rr = new ArrayList<Ramo>();
+					Ramo r2 = new Ramo();
+					r2.setNome("GA");
+					r2.setRotulo("Nenhuma");
 					
-					rr.add(r);
+					r.setRotulo("RUIM");
+					r.ramo.add(r2);
+					
+					
+					//arvore
+					Tree t = new Tree();
+					t.setNome("HC");
+					t.ramos.add(r);
+					
 					tt.add(t);
 					
+					
 					for(int i=0; i < tt.size(); i++) {	
-						System.out.println(tt.get(i).getRaiz());
-						System.out.println(tt.get(i).ramos.get(i).getRotulo());
-						System.out.println(tt.get(i).ramos.get(i).getClasses());
+						
+						System.out.println(tt.get(i).getNome() +"---> "
+								+ tt.get(i).ramos.get(i).getRotulo());
+//						for(int j=1; i < tt.get(i).ramos.size();j++) {
+//							System.out.println(tt.get(i).ramos.get(j).getRotulo());
+//							
+//						}
+						
 											
 					}// fim "for"
 					

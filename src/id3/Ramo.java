@@ -5,27 +5,33 @@ import java.util.List;
 
 public class Ramo {
 	
-	private String raiz;
-	private String ramo;
+	
+	private String nome;
 	private String rotulo;
 	private List<String> classes = new ArrayList<String>();
-	private Ramo ramos;
-	
-	
-	public Ramo getRamos(String ramo,String rotulo) {
+	List <Ramo> ramo = new ArrayList<Ramo>();
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public List<Ramo> getRamo() {
+		return ramo;
+	}
+	public void setRamo(List<Ramo> ramo) {
+		this.ramo = ramo;
+	}
+	public Ramo getRamos() {
 		return ramos;
 	}
 	public void setRamos(Ramo ramos) {
 		this.ramos = ramos;
 	}
+	private Ramo ramos;
 	
 	
-	public String getRamo() {
-		return ramo;
-	}
-	public void setRamo(String ramo) {
-		this.ramo = ramo;
-	}
+
 	public String getRotulo() {
 		return rotulo;
 	}
@@ -38,11 +44,5 @@ public class Ramo {
 	public void setClasses(List<String> classes) {
 		this.classes = classes;
 	}
-	public String getRaiz() {
-		return raiz;
-	}
-	public void setRaiz(String raiz) {
-		this.raiz = raiz;
-	}
-
+	
 }
