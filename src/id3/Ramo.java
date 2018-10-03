@@ -5,10 +5,12 @@ import java.util.List;
 
 public class Ramo {
 	
+	private String raiz;
 	private String ramo;
 	private String rotulo;
-	private Ramo ramos;
 	private List<String> classes = new ArrayList<String>();
+	private Ramo ramos;
+	
 	
 	public Ramo getRamos(String ramo,String rotulo) {
 		return ramos;
@@ -35,6 +37,12 @@ public class Ramo {
 	}
 	public void setClasses(List<String> classes) {
 		this.classes = classes;
+	}
+	public String getRaiz() {
+		return raiz;
+	}
+	public void setRaiz(String raiz) {
+		this.raiz = raiz;
 	}
 
 }
