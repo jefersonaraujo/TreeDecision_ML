@@ -7,7 +7,17 @@ public class Ramo {
 	
 	private String ramo;
 	private String rotulo;
+	private Ramo ramos;
 	private List<String> classes = new ArrayList<String>();
+	
+	public Ramo getRamos(String ramo,String rotulo) {
+		return ramos;
+	}
+	public void setRamos(Ramo ramos) {
+		this.ramos = ramos;
+	}
+	
+	
 	public String getRamo() {
 		return ramo;
 	}

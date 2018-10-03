@@ -7,7 +7,7 @@ public class Tree {
 	
 	private String raiz;
 	private String nome;
-	private ArrayList<Tree> ramos = new ArrayList<>();
+	List <Ramo> ramos = new ArrayList<Ramo>();
 
 	
 	public String getRaiz() {
@@ -22,12 +22,7 @@ public class Tree {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public ArrayList<Tree> getRamos() {
-		return ramos;
-	}
-	public void setRamos(ArrayList<Tree> tt) {
-		this.ramos = tt;
-	}
+
 
 
 	

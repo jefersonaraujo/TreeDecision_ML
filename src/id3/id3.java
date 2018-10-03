@@ -155,15 +155,23 @@ public class id3 {
 					
 					System.out.println("Teste estrutura manual");
 					Tree t = new Tree();
+					t.setNome("TEST");
 					t.setRaiz("HC");
-					t.setNome("HISTORICO DE CREDIDO");
+					
 					Ramo r = new Ramo();
-					ArrayList<Tree> tt = new ArrayList<>();
+					r.setRotulo("RUIM");
+					r.setRamo("GA");
+					t.ramos.add(r);
+					ArrayList<Tree> tt = new ArrayList<Tree>();
+					ArrayList<Ramo> rr = new ArrayList<Ramo>();
+					
+					rr.add(r);
 					tt.add(t);
-					t.setRamos(tt);
 					
 					for(int i=0; i < tt.size(); i++) {	
-						System.out.println(tt.get(i).getRamos().get(i).getNome());
+						System.out.println(tt.get(i).getRaiz());
+						System.out.println(tt.get(i).ramos.get(i).getRotulo());
+						System.out.println(tt.get(i).ramos.get(i).getClasses());
 											
 					}// fim "for"
 					
