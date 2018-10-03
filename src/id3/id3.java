@@ -158,11 +158,14 @@ public class id3 {
 					//ArrayList<Ramo> rr = new ArrayList<Ramo>();
 					
 					Ramo r = new Ramo();
+					r.setRotulo("RUIM");
+					
 					Ramo r2 = new Ramo();
 					r2.setNome("GA");
 					r2.setRotulo("Nenhuma");
 					
-					r.setRotulo("RUIM");
+					
+					
 					r.ramo.add(r2);
 					
 					
@@ -174,14 +177,14 @@ public class id3 {
 					tt.add(t);
 					
 					
-					for(int i=0; i < tt.size(); i++) {	
-						
+					for(int i=0; i < tt.size(); i++) {							
 						System.out.println(tt.get(i).getNome() +"---> "
-								+ tt.get(i).ramos.get(i).getRotulo());
-//						for(int j=1; i < tt.get(i).ramos.size();j++) {
-//							System.out.println(tt.get(i).ramos.get(j).getRotulo());
-//							
-//						}
+								);
+						for(int j=0; j < tt.get(i).ramos.size();j++) {
+							System.out.println(tt.get(i).ramos.size());
+							System.out.println( tt.get(i).ramos.get(j).getRotulo());
+							
+						}
 						
 											
 					}// fim "for"
