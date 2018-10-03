@@ -156,8 +156,8 @@ public class id3 {
 					System.out.println("Teste estrutura manual");
 					Tree t = new Tree();
 					t.setRaiz("HC");
-					t.setRotulo("RUIM");
-					t.setRamo("GARANTIA");;
+					
+				
 					
 				}
 				
