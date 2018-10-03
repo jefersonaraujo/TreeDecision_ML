@@ -156,6 +156,17 @@ public class id3 {
 					System.out.println("Teste estrutura manual");
 					Tree t = new Tree();
 					t.setRaiz("HC");
+					t.setNome("HISTORICO DE CREDIDO");
+					Ramo r = new Ramo();
+					ArrayList<Tree> tt = new ArrayList<>();
+					tt.add(t);
+					t.setRamos(tt);
+					
+					for(int i=0; i < tt.size(); i++) {	
+						System.out.println(tt.get(i).getRamos().get(i).getNome());
+											
+					}// fim "for"
+					
 					
 				
 					

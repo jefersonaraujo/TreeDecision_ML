@@ -6,7 +6,8 @@ import java.util.List;
 public class Tree {
 	
 	private String raiz;
-	private String classe;
+	private String nome;
+	private ArrayList<Tree> ramos = new ArrayList<>();
 
 	
 	public String getRaiz() {
@@ -15,12 +16,19 @@ public class Tree {
 	public void setRaiz(String raiz) {
 		this.raiz = raiz;
 	}
-	public String getClasse() {
-		return classe;
+	public String getNome() {
+		return nome;
 	}
-	public void setClasse(String classe) {
-		this.classe = classe;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
+	public ArrayList<Tree> getRamos() {
+		return ramos;
+	}
+	public void setRamos(ArrayList<Tree> tt) {
+		this.ramos = tt;
+	}
+
 
 	
 	
