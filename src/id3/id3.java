@@ -160,8 +160,19 @@ public class id3 {
 					t1.setId_raiz(1);
 					t1.setId(2);
 					t1.setRotulo("NENHUM");
+					t1.setNome("GA");
 					t.ramos.add(t1);
+					tt.add(t);
 					
+					for(int i=0; i < tt.size();i++ ) {
+						System.out.println(tt.get(i).getId_raiz() + " --> " +tt.get(i).getNome() + " --> " + tt.get(i).getRotulo() );
+						for(int j=0; j < tt.get(i).ramos.size();j++) {
+							System.out.println(tt.get(i).ramos.get(j).getNome() + " --> " + tt.get(i).ramos.get(j).getRotulo());
+							
+							
+							
+						}
+					}
 				
 					
 				}
