@@ -156,6 +156,10 @@ public class id3 {
 					t.setId(1);
 					t.setNome("HC");
 					t.setRotulo("RUIM");
+					String ramos[][] ={ {"NENHUM"}, {"ALTO RISCO"} };
+					System.out.println(ramos[0][0] +" ---> " + ramos[1][0] );
+					
+					System.out.println();
 					Tree t1 = new Tree();
 					t1.setId_raiz(1);
 					t1.setId(2);

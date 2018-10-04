@@ -14,6 +14,15 @@ public class Tree {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	private String no[][];
+	public String[][] getNo() {
+		return no;
+	}
+	public void setNo(String[][] no) {
+		this.no = no;
+	}
+
 	private String rotulo;
 	private String classe;
 	private String nome;
