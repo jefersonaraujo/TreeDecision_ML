@@ -33,14 +33,7 @@ public class id3 {
 		PR.add("HC");
 		PR.add("GA");
 		PR.add("RE");
-		PR.add("DI");	
-		
-		
-	
-		
-	
-	
-			
+		PR.add("DI");		
 		
 		
 		try {
@@ -154,41 +147,20 @@ public class id3 {
 					induzir_arvore(particao_aux, v_aux);
 					
 					System.out.println("Teste estrutura manual");
-					ArrayList<Tree> tt = new ArrayList<Tree>();
-					//ArrayList<Ramo> rr = new ArrayList<Ramo>();
-					
-					Ramo r = new Ramo();
-					r.setRotulo("RUIM");
-					
-					Ramo r2 = new Ramo();
-					r2.setNome("GA");
-					r2.setRotulo("Nenhuma");
 					
 					
+					List<Tree> tt = new ArrayList<Tree>();
 					
-					r.ramo.add(r2);
-					
-					
-					//arvore
 					Tree t = new Tree();
+					
+					t.setId(1);
 					t.setNome("HC");
-					t.ramos.add(r);
-					
-					tt.add(t);
-					
-					
-					for(int i=0; i < tt.size(); i++) {							
-						System.out.println(tt.get(i).getNome() +"---> "
-								);
-						for(int j=0; j < tt.get(i).ramos.size();j++) {
-							System.out.println(tt.get(i).ramos.get(i).getRotulo());
-							System.out.println( tt.get(i).ramos.get(j).getRamo().get(j).getNome());
-							
-						}
-						
-											
-					}// fim "for"
-					
+					t.setRotulo("RUIM");
+					Tree t1 = new Tree();
+					t1.setId_raiz(1);
+					t1.setId(2);
+					t1.setRotulo("NENHUM");
+					t.ramos.add(t1);
 					
 				
 					
