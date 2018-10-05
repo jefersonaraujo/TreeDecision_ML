@@ -5,12 +5,25 @@ import java.util.List;
 
 public class Ramo {
 	
-	
+	private int id;
+	private int id_pai;	
 	private String nome;
 	private String rotulo;
 	private List<String> classes = new ArrayList<String>();
 	List <Ramo> ramo = new ArrayList<Ramo>();
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getId_pai() {
+		return id_pai;
+	}
+	public void setId_pai(int id_pai) {
+		this.id_pai = id_pai;
+	}
 	public String getNome() {
 		return nome;
 	}

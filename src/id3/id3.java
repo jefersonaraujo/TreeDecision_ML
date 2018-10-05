@@ -159,7 +159,8 @@ public class id3 {
 					String ramos[][] ={ {"NENHUM"}, {"ALTO RISCO"} };
 					System.out.println(ramos[0][0] +" ---> " + ramos[1][0] );
 					
-					System.out.println();
+					t.setNo(ramos);
+					
 					Tree t1 = new Tree();
 					t1.setId_raiz(1);
 					t1.setId(2);
@@ -177,7 +178,27 @@ public class id3 {
 							
 						}
 					}
-				
+					List<Ramo> v_aux2 = new ArrayList<Ramo>();
+					Ramo r = new Ramo();
+					r.setId(1);
+					r.setNome("HC");
+					r.setRotulo("RUIM");
+					Ramo r2 = new Ramo();
+					r2.setId(2);
+					r2.setId_pai(1);
+					r2.setNome("GA");
+					r2.setRotulo("NENHUM");
+					r.ramo.add(r2);
+					v_aux2.add(r);
+					
+					for(int i=0; i < v_aux2.size();i++ ) {
+						System.out.println(v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo() );
+						
+							
+							
+							
+						}
+					}
 					
 				}
 				
@@ -192,4 +213,3 @@ public class id3 {
 	}
 	
 	
-}
