@@ -122,9 +122,157 @@ public class id3 {
 											
 					}// fim "for"
 					
-					induzir_arvore(particao_aux, v_aux);
+					induzir_arvore(particao_aux, pR);
 
 					}
+				
+				if(P.equals("GA")) {
+					System.out.println( "PROPRIEDADA DA RODADA " +P);
+					//listas temporarias
+					List<String> v_aux = new ArrayList<String>();
+					List<Dados> particao_aux = new ArrayList<Dados>();
+					
+		
+					//para cada valor V de P
+					for(int i=0; i < ces.size(); i++) {	
+						//se não tiver ramos iguais adiciona no aux
+						if(!v_aux.contains(ces.get(i).getHc())) {
+							v_aux.add(ces.get(i).getHc());
+						}
+						
+				}// fim "for"
+					
+					System.out.println("Ramos de  "+ P +"  -> " +v_aux.toString());
+					//System.out.println(pR.toString());
+					
+					System.out.println("Crie um ramo da arvore rotulado com V");
+					String V = v_aux.get(0);
+					System.out.println("Pego o primeiro = " + V );
+					System.out.println(P + "-->" + v_aux.get(0));
+					v_aux.remove(0);//remover da list
+					
+					
+					//System.out.println(v_aux.toString()); //lista de
+					//contrua particao com os elementos de contunto exempo com valores V para propriedade P
+					for(int i=0;i < ces.size(); i++) {
+						if(ces.get(i).getHc().equals(V)) {
+							//particoes
+							System.out.println(ces.get(i).getN()); 
+							particao_aux.add(ces.get(i));
+							
+						}
+						
+						
+					
+						
+					}//exibindo particoes montadas.
+					for(int i=0; i < particao_aux.size(); i++) {	
+						System.out.println(particao_aux.get(i).getRisco());
+											
+					}// fim "for"
+					
+					induzir_arvore(particao_aux, pR);
+
+					}
+				
+				if(P.equals("RE")) {
+					System.out.println( "PROPRIEDADA DA RODADA " +P);
+					//listas temporarias
+					List<String> v_aux = new ArrayList<String>();
+					List<Dados> particao_aux = new ArrayList<Dados>();
+					
+		
+					//para cada valor V de P
+					for(int i=0; i < ces.size(); i++) {	
+						//se não tiver ramos iguais adiciona no aux
+						if(!v_aux.contains(ces.get(i).getHc())) {
+							v_aux.add(ces.get(i).getHc());
+						}
+						
+				}// fim "for"
+					
+					System.out.println("Ramos de  "+ P +"  -> " +v_aux.toString());
+					//System.out.println(pR.toString());
+					
+					System.out.println("Crie um ramo da arvore rotulado com V");
+					String V = v_aux.get(0);
+					System.out.println("Pego o primeiro = " + V );
+					System.out.println(P + "-->" + v_aux.get(0));
+					v_aux.remove(0);//remover da list
+					
+					
+					//System.out.println(v_aux.toString()); //lista de
+					//contrua particao com os elementos de contunto exempo com valores V para propriedade P
+					for(int i=0;i < ces.size(); i++) {
+						if(ces.get(i).getHc().equals(V)) {
+							//particoes
+							System.out.println(ces.get(i).getN()); 
+							particao_aux.add(ces.get(i));
+							
+						}
+						
+						
+					
+						
+					}//exibindo particoes montadas.
+					for(int i=0; i < particao_aux.size(); i++) {	
+						System.out.println(particao_aux.get(i).getRisco());
+											
+					}// fim "for"
+					
+					induzir_arvore(particao_aux, pR);
+
+					}
+				
+				if(P.equals("DI")) {
+					System.out.println( "PROPRIEDADA DA RODADA " +P);
+					//listas temporarias
+					List<String> v_aux = new ArrayList<String>();
+					List<Dados> particao_aux = new ArrayList<Dados>();
+					
+		
+					//para cada valor V de P
+					for(int i=0; i < ces.size(); i++) {	
+						//se não tiver ramos iguais adiciona no aux
+						if(!v_aux.contains(ces.get(i).getHc())) {
+							v_aux.add(ces.get(i).getHc());
+						}
+						
+				}// fim "for"
+					
+					System.out.println("Ramos de  "+ P +"  -> " +v_aux.toString());
+					//System.out.println(pR.toString());
+					
+					System.out.println("Crie um ramo da arvore rotulado com V");
+					String V = v_aux.get(0);
+					System.out.println("Pego o primeiro = " + V );
+					System.out.println(P + "-->" + v_aux.get(0));
+					v_aux.remove(0);//remover da list
+					
+					
+					//System.out.println(v_aux.toString()); //lista de
+					//contrua particao com os elementos de contunto exempo com valores V para propriedade P
+					for(int i=0;i < ces.size(); i++) {
+						if(ces.get(i).getHc().equals(V)) {
+							//particoes
+							System.out.println(ces.get(i).getN()); 
+							particao_aux.add(ces.get(i));
+							
+						}
+						
+						
+					
+						
+					}//exibindo particoes montadas.
+					for(int i=0; i < particao_aux.size(); i++) {	
+						System.out.println(particao_aux.get(i).getRisco());
+											
+					}// fim "for"
+					
+					induzir_arvore(particao_aux, pR);
+
+					}
+				
 				
 //				if(P.equals("HC")) {
 //					List<String> v_aux = new ArrayList<String>();
