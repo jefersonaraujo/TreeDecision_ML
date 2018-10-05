@@ -17,6 +17,9 @@ public class id3 {
 		//System.out.println("hello world ! ");
 		//objetivo � ler um arquivo .csv e "montar" uma arvore de decicao 
 		
+		///tree
+		List<String> tree = new ArrayList<String>();
+		
 		//String csvArquivo ="C:\\Users\\ghost\\dados.csv";
 		String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
 		BufferedReader conteudoCSV = null;
@@ -92,14 +95,19 @@ public class id3 {
 		//classe		
 		List<String> classe = new ArrayList<String>();
 		for(int i=0; i < ces.size(); i++) {
-			//System.out.println(ces.get(i).getRisco());
-			//classe.add(ces.get(i).getRisco());
+//			System.out.println(ces.get(i).getRisco());
+//			classe.add(ces.get(i).getRisco());
 			
 		}
 		Util u = new Util();
 		Boolean res=  u.CompararClasses(ces);
 		if(res) {
 			System.out.println("Todos Elementos de Classes iguais !\n Retornar um no folha rotulado com essa classe !!");
+//			List<Ramo> v_temp = new ArrayList<Ramo>();
+//			Ramo r = new Ramo();
+//			r.setId(1);
+//			r.setNome("HC");
+//			r.setRotulo("RUIM");
 		}else {
 			System.out.println("Existem elementos diferentes !");
 			if(pR.isEmpty()) {
@@ -117,7 +125,17 @@ public class id3 {
 					for(int i=0; i < ces.size(); i++) {						
 						if(!v_aux.contains(ces.get(i).getHc())) {
 							v_aux.add(ces.get(i).getHc());
-						}						
+						}
+						if(!v_aux.contains(ces.get(i).getDivida())) {
+							v_aux.add(ces.get(i).getDivida());
+						}
+						if(!v_aux.contains(ces.get(i).getGarantia())) {
+							v_aux.add(ces.get(i).getGarantia());
+						}
+						if(!v_aux.contains(ces.get(i).getRisco())) {
+							v_aux.add(ces.get(i).getRisco());
+						}
+						
 					}// fim "for"
 					
 					System.out.println(v_aux.toString());
@@ -133,10 +151,13 @@ public class id3 {
 					for(int i=0;i < ces.size(); i++) {
 						if(ces.get(i).getHc().equals(V)) {
 							//particoes
-							System.out.println(ces.get(i).getN());
+							System.out.println(ces.get(i).getN()); 
 							particao_aux.add(ces.get(i));
 							
 						}
+						
+						
+					
 						
 					}//exibindo particoes montadas.
 					for(int i=0; i < particao_aux.size(); i++) {	
@@ -146,69 +167,69 @@ public class id3 {
 					
 					induzir_arvore(particao_aux, v_aux);
 					
-					System.out.println("Teste estrutura manual");
-					
-					
-					List<Tree> tt = new ArrayList<Tree>();
-					
-					Tree t = new Tree();
-					
-					t.setId(1);
-					t.setNome("HC");
-					t.setRotulo("RUIM");
-					String ramos[][] ={ {"NENHUM"}, {"ALTO RISCO"} };
-					System.out.println(ramos[0][0] +" ---> " + ramos[1][0] );
-					
-					t.setNo(ramos);
-					
-					Tree t1 = new Tree();
-					t1.setId_raiz(1);
-					t1.setId(2);
-					t1.setRotulo("NENHUM");
-					t1.setNome("GA");
-					t.ramos.add(t1);
-					tt.add(t);
-					
-					for(int i=0; i < tt.size();i++ ) {
-						System.out.println(tt.get(i).getId_raiz() + " --> " +tt.get(i).getNome() + " --> " + tt.get(i).getRotulo() );
-						for(int j=0; j < tt.get(i).ramos.size();j++) {
-							System.out.println(tt.get(i).ramos.get(j).getNome() + " --> " + tt.get(i).ramos.get(j).getRotulo());
-							
-							
-							
-						}
-					}
-					List<Ramo> v_aux2 = new ArrayList<Ramo>();
-					Ramo r = new Ramo();
-					r.setId(1);
-					r.setNome("HC");
-					r.setRotulo("RUIM");
-					Ramo r2 = new Ramo();
-					r2.setId(2);
-					r2.setId_pai(1);
-					r2.setNome("GA");
-					r2.setRotulo("NENHUM");
-					r.ramo.add(r2);
-					v_aux2.add(r);
-					
-					
-					List<String> v_aux3 = new ArrayList<String>();
-					String ai ;
-					for(int i=0; i < v_aux2.size();i++ ) {
-						System.out.println(v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo() );
-						ai= v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo();
-						v_aux3.add(ai);				
-						//System.out.println(ai);						
-							
-						}
-					String listString = "";
-
-					for (String s : v_aux3)
-					{
-					    listString += s + "\t";
-					}
-					
-					System.out.println(listString);
+//					System.out.println("Teste estrutura manual");
+//					
+//					
+//					List<Tree> tt = new ArrayList<Tree>();
+//					
+//					Tree t = new Tree();
+//					
+//					t.setId(1);
+//					t.setNome("HC");
+//					t.setRotulo("RUIM");
+//					String ramos[][] ={ {"NENHUM"}, {"ALTO RISCO"} };
+//					System.out.println(ramos[0][0] +" ---> " + ramos[1][0] );
+//					
+//					t.setNo(ramos);
+//					
+//					Tree t1 = new Tree();
+//					t1.setId_raiz(1);
+//					t1.setId(2);
+//					t1.setRotulo("NENHUM");
+//					t1.setNome("GA");
+//					t.ramos.add(t1);
+//					tt.add(t);
+//					
+//					for(int i=0; i < tt.size();i++ ) {
+//						System.out.println(tt.get(i).getId_raiz() + " --> " +tt.get(i).getNome() + " --> " + tt.get(i).getRotulo() );
+//						for(int j=0; j < tt.get(i).ramos.size();j++) {
+//							System.out.println(tt.get(i).ramos.get(j).getNome() + " --> " + tt.get(i).ramos.get(j).getRotulo());
+//							
+//							
+//							
+//						}
+//					}
+//					List<Ramo> v_aux2 = new ArrayList<Ramo>();
+//					Ramo r = new Ramo();
+//					r.setId(1);
+//					r.setNome("HC");
+//					r.setRotulo("RUIM");
+//					Ramo r2 = new Ramo();
+//					r2.setId(2);
+//					r2.setId_pai(1);
+//					r2.setNome("GA");
+//					r2.setRotulo("NENHUM");
+//					r.ramo.add(r2);
+//					v_aux2.add(r);
+//					
+//					
+//					List<String> v_aux3 = new ArrayList<String>();
+//					String ai ;
+//					for(int i=0; i < v_aux2.size();i++ ) {
+//						System.out.println(v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo() );
+//						ai= v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo();
+//						v_aux3.add(ai);				
+//						//System.out.println(ai);						
+//							
+//						}
+//					String listString = "";
+//
+//					for (String s : v_aux3)
+//					{
+//					    listString += s + "\t";
+//					}
+//					
+//					System.out.println(listString);
 					}
 					
 				}
