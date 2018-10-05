@@ -191,13 +191,24 @@ public class id3 {
 					r.ramo.add(r2);
 					v_aux2.add(r);
 					
+					
+					List<String> v_aux3 = new ArrayList<String>();
+					String ai ;
 					for(int i=0; i < v_aux2.size();i++ ) {
 						System.out.println(v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo() );
-						
-							
-							
+						ai= v_aux2.get(i).getId_pai() + " --> " + v_aux2.get(i).getId()  + " --> " + v_aux2.get(i).getNome() + " --> " + v_aux2.get(i).getRotulo();
+						v_aux3.add(ai);				
+						//System.out.println(ai);						
 							
 						}
+					String listString = "";
+
+					for (String s : v_aux3)
+					{
+					    listString += s + "\t";
+					}
+					
+					System.out.println(listString);
 					}
 					
 				}
