@@ -91,6 +91,8 @@ public class id3 {
 							v_aux.add(ces.get(i).getHc());
 						}
 						
+						System.out.println(v_aux.toString());
+						
 				}// fim "for"
 					
 					System.out.println("Ramos de  "+ P +"  -> " +v_aux.toString());
@@ -157,7 +159,7 @@ public class id3 {
 					for(int i=0;i < ces.size(); i++) {
 						if(ces.get(i).getHc().equals(V)) {
 							//particoes
-							System.out.println(ces.get(i).getN()); 
+							System.out.println("Particoes " +ces.get(i).getN()); 
 							particao_aux.add(ces.get(i));
 							
 						}
@@ -167,7 +169,7 @@ public class id3 {
 						
 					}//exibindo particoes montadas.
 					for(int i=0; i < particao_aux.size(); i++) {	
-						System.out.println(particao_aux.get(i).getRisco());
+						System.out.println(particao_aux.get(i).getN() + "     | " + particao_aux.get(i).getRisco() + "     |" + particao_aux.get(i).getHc() + "    | "  + particao_aux.get(i).getDivida()  + "    | " + particao_aux.get(i).getGarantia() + " | "  );
 											
 					}// fim "for"
 					
