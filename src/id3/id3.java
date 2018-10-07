@@ -14,6 +14,8 @@ import java.util.stream.Collectors;
 public class id3 {
 	
 	public Tree tt = new Tree();
+	
+	
 	public static void main(String[] args) {
 		int id;
 		
@@ -21,8 +23,8 @@ public class id3 {
 		//System.out.println("hello world ! ");
 		//objetivo  ler um arquivo .csv e "montar" uma arvore de decicao 
 		
-		//String csvArquivo ="C:\\Users\\ghost\\dados.csv";
-		String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
+		String csvArquivo ="C:\\Users\\ghost\\dados.csv";
+		//String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
 		util.LerArquivo(csvArquivo);
 /***************************************************************************************************/
 		
@@ -31,9 +33,9 @@ public class id3 {
 		
 /***************************************************************************************************/		
 		//Lista Inicial CE
-		List<Integer> CE = new ArrayList<Integer>();
-		for(int i=1; i< 15; i++) {CE.add(i);}		
-		System.out.println("Lista de CE inicial " + CE.toString());
+//		List<Integer> CE = new ArrayList<Integer>();
+//		for(int i=1; i< 15; i++) {CE.add(i);}		
+//		System.out.println("Lista de CE inicial " + CE.toString());
 /***************************************************************************************************/	
 		// Array de propriedades a serem testadas.  Definidas estaticamente 
 		List<String> PR = new ArrayList<String>(); PR.add("HC");PR.add("GA"); PR.add("RE");	PR.add("DI");	
@@ -55,6 +57,7 @@ public class id3 {
 /***************************************************************************************************/				
 		//chamar função comparar
 		Util u = new Util();
+		List<String> pr_aux = pR;
 		Boolean res=  u.CompararClasses(ces);
 		
 /***************************************************************************************************/	
@@ -63,17 +66,19 @@ public class id3 {
 
 		}else {
 			System.out.println("Existem elementos diferentes !");
-			if(pR.isEmpty()) {
+			if(pr_aux.isEmpty()) {
 				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
 			}else {
 				
+			
+				
 				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
-				String P = (String) pR.get(0);
+				String P = (String) pr_aux.get(0);
 				System.out.println("Selecionado a Propriedade. = " + P);
 				
 				System.out.println();
 				pR.remove(0);
-				System.out.println("Propriedade Restantes da Lista  = " + pR.toString());
+				System.out.println("Propriedade Restantes da Lista  = " + pr_aux.toString());
 							
 				
 				
@@ -124,7 +129,7 @@ public class id3 {
 											
 					}// fim "for"
 					
-					induzir_arvore(particao_aux, pR);
+					induzir_arvore(particao_aux, pr_aux);
 
 					}
 				
