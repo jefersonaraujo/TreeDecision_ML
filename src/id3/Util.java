@@ -27,10 +27,24 @@ public class Util {
 		
 	}
 	
-	
+	public Dados CriarParticoes(Dados ces, String V) {
+		
+		return ces;
+	}
 	public Tree CriarArvore(String nome, String  rotulo) {
 		
 		return null;
+	}
+	
+	
+	public List Propriedades() {
+		List<String> PR = new ArrayList<String>(); 
+		PR.add("HC");
+		PR.add("GA");		
+		PR.add("DI");
+		PR.add("RE");
+		return PR;
+		
 	}
 	
 	public List LerArquivo(String caminho) {
