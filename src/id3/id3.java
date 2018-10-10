@@ -114,11 +114,11 @@ public class id3 {
 					for(int i =0; i < ces.size();i++) {
 						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
 						
-//						if(ces.get(i).getHc().equals(V)){
-//							//System.out.println(ces.get(i).getN());
-//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
-//							particao_aux.add(ces.get(i));
-//						}
+						if(ces.get(i).getHc().equals(V)){
+							//System.out.println(ces.get(i).getN());
+							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							particao_aux.add(ces.get(i));
+						}
 						
 					}//fim for	
 					List<String> nodo_aux = new ArrayList<String>();
