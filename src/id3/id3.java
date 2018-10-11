@@ -122,20 +122,23 @@ public class id3 {
 						
 					}//fim for
 					
+					//continuacao para cada vakir V de P
+					for(int i =0; i < ces.size();i++) {
+						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+						
+						if(ces.get(i).getHc().equals(V)){
+							//System.out.println(ces.get(i).getN());
+							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							particao_aux.add(ces.get(i));
+						}
+						
+					}//fim for
 					
 					List<String> nodo_aux = new ArrayList<String>();
 					nodo_aux.add(P);
 					nodo_aux.add(V);
-					//continuacao para cada vakir V de P
-					for(int i =0; i < ces.size();i++) {
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
-						
-						
-					}//fim for
 					
-				
-					
-				
+					induzir_arvore(particao_aux, pr_aux,nodo_aux);
 					
 				} // fim IF
 //				for(int i=0; i < particao_aux.size(); i++) {	
