@@ -120,12 +120,22 @@ public class id3 {
 							particao_aux.add(ces.get(i));
 						}
 						
-					}//fim for	
+					}//fim for
+					
+					
 					List<String> nodo_aux = new ArrayList<String>();
 					nodo_aux.add(P);
 					nodo_aux.add(V);
+					//continuacao para cada vakir V de P
+					for(int i =0; i < ces.size();i++) {
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+						
+						
+					}//fim for
 					
-					induzir_arvore(particao_aux, pr_aux,nodo_aux);
+				
+					
+				
 					
 				} // fim IF
 //				for(int i=0; i < particao_aux.size(); i++) {	
