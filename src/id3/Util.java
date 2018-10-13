@@ -66,6 +66,7 @@ public class Util {
 				dt1.setHc(dados[2]);
 				dt1.setDivida(dados[3]);
 				dt1.setGarantia(dados[4]);
+				dt1.setRenda(dados[5]);
 				listaDados.add(dt1);
 				//CE[i] = i;
 				
