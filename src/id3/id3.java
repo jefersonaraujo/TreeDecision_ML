@@ -24,8 +24,8 @@ public class id3 {
 		//System.out.println("hello world ! ");
 		//objetivo  ler um arquivo .csv e "montar" uma arvore de decicao 
 		
-		//String csvArquivo ="C:\\Users\\ghost\\dados.csv";
-		String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
+		String csvArquivo ="C:\\Users\\ghost\\dados.csv";
+		//String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
 		util.LerArquivo(csvArquivo);
 /***************************************************************************************************/
 		
@@ -165,7 +165,7 @@ public class id3 {
 						
 						if(ces.get(i).getGarantia().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "   + ces.get(i).getRenda() );
 							particao_aux.add(ces.get(i));
 						}
 						
