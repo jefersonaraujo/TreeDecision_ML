@@ -134,11 +134,15 @@ public class id3 {
 						
 					}//fim for
 					
-					List<String> nodo_aux = new ArrayList<String>();
-					nodo_aux.add(P);
-					nodo_aux.add(V);
+					for(int k=0; k < ces.size(); k++) {
+						List<String> nodo_aux = new ArrayList<String>();
+						nodo_aux.add(P);
+						nodo_aux.add(V);
+						
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					}
 					
-					induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					
 					
 				} // fim IF
 //				for(int i=0; i < particao_aux.size(); i++) {	
@@ -170,11 +174,15 @@ public class id3 {
 						}
 						
 					}//fim for	
-					List<String> nodo_aux = new ArrayList<String>();
-					nodo_aux.add(P);
-					nodo_aux.add(V);
 					
-					induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					for(int k=0; k < ces.size(); k++) {
+						List<String> nodo_aux = new ArrayList<String>();
+						nodo_aux.add(P);
+						nodo_aux.add(V);
+						
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					}
+					
 					
 				} // fim IF
 				
@@ -202,11 +210,52 @@ public class id3 {
 						}
 						
 					}//fim for	
-					List<String> nodo_aux = new ArrayList<String>();
-					nodo_aux.add(P);
-					nodo_aux.add(V);
 					
-					induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					for(int k=0; k < ces.size(); k++) {
+						List<String> nodo_aux = new ArrayList<String>();
+						nodo_aux.add(P);
+						nodo_aux.add(V);
+						
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					}
+					
+					
+				} 
+				
+				
+				if(P.equals("RE")) {
+					for(int i=0; i < ces.size(); i++) {	
+						//se não tiver ramos iguais adiciona no aux
+						if(!v_aux.contains(ces.get(i).getRenda())) {
+							v_aux.add(ces.get(i).getRenda());
+						}
+					}
+						System.out.println(v_aux.toString());
+
+					String V = v_aux.get(0);
+					System.out.println("Pego o primeiro = " + V );
+					System.out.println(P + "-->" + v_aux.get(0));
+					
+					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
+					for(int i =0; i < ces.size();i++) {
+						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+						
+						if(ces.get(i).getGarantia().equals(V)){
+							//System.out.println(ces.get(i).getN());
+							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							particao_aux.add(ces.get(i));
+						}
+						
+					}//fim for	
+					
+					for(int k=0; k < ces.size(); k++) {
+						List<String> nodo_aux = new ArrayList<String>();
+						nodo_aux.add(P);
+						nodo_aux.add(V);
+						
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					}
+					
 					
 				} 
 				
