@@ -123,18 +123,7 @@ public class id3 {
 						
 					}//fim for
 					
-					//continuacao para cada vakir V de P
-//					for(int i =0; i < ces.size();i++) {
-//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-//						
-//						if(ces.get(i).getHc().equals(V)){
-//							//System.out.println(ces.get(i).getN());
-//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
-//							particao_aux.add(ces.get(i));
-//						}
-//						
-//					}//fim for
-					
+					//continuacao para cada vakir V de P				
 					for(int k=0; k < ces.size(); k++) {
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
@@ -146,10 +135,7 @@ public class id3 {
 					
 					
 				} // fim IF
-//				for(int i=0; i < particao_aux.size(); i++) {	
-//					System.out.println(particao_aux.get(i).getN() + "     | " + particao_aux.get(i).getRisco() + "     |" + particao_aux.get(i).getHc() + "    | "  + particao_aux.get(i).getDivida()  + "    | " + particao_aux.get(i).getGarantia() + " | "  );
-//									
-//				}// fim "for"
+
 				
 				if(P.equals("GA")) {
 					for(int i=0; i < ces.size(); i++) {	
