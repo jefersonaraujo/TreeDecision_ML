@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class id3 {
 	
 	public Tree tt = new Tree();
-	///public static List<String> PR = new ArrayList<String>(); 
+	//public static List<String> PR = new ArrayList<String>(); 
 
 	
 	public static void main(String[] args) {
@@ -39,10 +39,10 @@ public class id3 {
 //		System.out.println("Lista de CE inicial " + CE.toString());
 /***************************************************************************************************/	
 		// Array de propriedades a serem testadas.  Definidas estaticamente 
-//		PR.add("HC");
-//		PR.add("GA");
-//		PR.add("RE");
-//		PR.add("DI");
+		//PR.add("HC");
+		//PR.add("GA");
+	//	PR.add("RE");
+		//PR.add("DI");
 		
 		List PR;
 		PR = util.Propriedades();
