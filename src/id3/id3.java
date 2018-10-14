@@ -116,23 +116,23 @@ public class id3 {
 						
 						if(ces.get(i).getHc().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
 							particao_aux.add(ces.get(i));
 						}
 						
 					}//fim for
 					
 					//continuacao para cada vakir V de P
-					for(int i =0; i < ces.size();i++) {
-						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-						
-						if(ces.get(i).getHc().equals(V)){
-							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
-							particao_aux.add(ces.get(i));
-						}
-						
-					}//fim for
+//					for(int i =0; i < ces.size();i++) {
+//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+//						
+//						if(ces.get(i).getHc().equals(V)){
+//							//System.out.println(ces.get(i).getN());
+//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+//							particao_aux.add(ces.get(i));
+//						}
+//						
+//					}//fim for
 					
 					for(int k=0; k < ces.size(); k++) {
 						List<String> nodo_aux = new ArrayList<String>();
