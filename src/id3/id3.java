@@ -203,7 +203,7 @@ public class id3 {
 					for(int i =0; i < ces.size();i++) {
 						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
 						
-						if(ces.get(i).getGarantia().equals(V)){
+						if(ces.get(i).getDivida().equals(V)){
 							//System.out.println(ces.get(i).getN());
 							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 							particao_aux.add(ces.get(i));
@@ -240,7 +240,7 @@ public class id3 {
 					for(int i =0; i < ces.size();i++) {
 						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
 						
-						if(ces.get(i).getGarantia().equals(V)){
+						if(ces.get(i).getRenda().equals(V)){
 							//System.out.println(ces.get(i).getN());
 							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 							particao_aux.add(ces.get(i));
