@@ -84,7 +84,8 @@ public class id3 {
 			if(pr_aux.isEmpty()) {
 				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
 				for(int i =0; i < ces.size();i++) {
-				System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+					System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
+				///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 				
 			}
 				
@@ -132,11 +133,11 @@ public class id3 {
 					//continuacao para cada valor V de P				
 					for(int k=0; k < v_aux.size(); k++) {
 						System.out.println(P +" -> " + v_aux.get(k));
-//						List<String> nodo_aux = new ArrayList<String>();
-//						nodo_aux.add(P);
-//						nodo_aux.add(V);
-//						
-//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+						List<String> nodo_aux = new ArrayList<String>();
+						nodo_aux.add(P);
+						nodo_aux.add(V);
+						
+						induzir_arvore(particao_aux, pr_aux,nodo_aux);
 					}
 					
 					
@@ -169,8 +170,9 @@ public class id3 {
 						
 					}//fim for	
 					
+					//continuacao para cada valor V de P				
 					for(int k=0; k < v_aux.size(); k++) {
-						System.out.println(P +" -> " + V);
+						System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
@@ -206,8 +208,9 @@ public class id3 {
 						
 					}//fim for	
 					
-					for(int k=0; k < ces.size(); k++) {
-						System.out.println(P +" -> " + V);
+					//continuacao para cada valor V de P				
+					for(int k=0; k < v_aux.size(); k++) {
+						System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
@@ -244,15 +247,15 @@ public class id3 {
 						
 					}//fim for	
 					
-					for(int k=0; k < ces.size(); k++) {
-						System.out.println(P +" -> " + V);
+					//continuacao para cada valor V de P				
+					for(int k=0; k < v_aux.size(); k++) {
+						System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
 						
 						induzir_arvore(particao_aux, pr_aux,nodo_aux);
 					}
-					
 					
 				} 
 				
