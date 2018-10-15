@@ -36,6 +36,17 @@ public class Util {
 		return null;
 	}
 	
+	public List<String> Lista(List<Dados> ces , String P) {
+		List<String> v_aux = new ArrayList<String>();
+		
+		for(int i=0; i < ces.size(); i++) {	
+			//se não tiver ramos iguais adiciona no aux
+			if(!v_aux.contains(ces.get(i).getHc())) {
+				v_aux.add(ces.get(i).getHc());
+			}
+		}
+		return v_aux;
+	}
 	
 	public List Propriedades() {
 		List<String> PR = new ArrayList<String>(); 

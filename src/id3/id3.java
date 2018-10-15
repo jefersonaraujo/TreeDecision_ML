@@ -109,7 +109,9 @@ public class id3 {
 							v_aux.add(ces.get(i).getHc());
 						}
 					}
-						System.out.println("LISTA : " + v_aux.toString());
+					
+					
+					System.out.println("LISTA : " + v_aux.toString());
 
 					String V = v_aux.get(0);
 					System.out.println("Pego o primeiro = " + V );
@@ -121,19 +123,20 @@ public class id3 {
 						
 						if(ces.get(i).getHc().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
+							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
 							particao_aux.add(ces.get(i));
 						}
 						
 					}//fim for
 					
-					//continuacao para cada vakir V de P				
-					for(int k=0; k < ces.size(); k++) {
-						List<String> nodo_aux = new ArrayList<String>();
-						nodo_aux.add(P);
-						nodo_aux.add(V);
-						
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+					//continuacao para cada valor V de P				
+					for(int k=0; k < v_aux.size(); k++) {
+						System.out.println(P +" -> " + v_aux.get(k));
+//						List<String> nodo_aux = new ArrayList<String>();
+//						nodo_aux.add(P);
+//						nodo_aux.add(V);
+//						
+//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
 					}
 					
 					
@@ -166,7 +169,8 @@ public class id3 {
 						
 					}//fim for	
 					
-					for(int k=0; k < ces.size(); k++) {
+					for(int k=0; k < v_aux.size(); k++) {
+						System.out.println(P +" -> " + V);
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
@@ -203,6 +207,7 @@ public class id3 {
 					}//fim for	
 					
 					for(int k=0; k < ces.size(); k++) {
+						System.out.println(P +" -> " + V);
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
@@ -240,6 +245,7 @@ public class id3 {
 					}//fim for	
 					
 					for(int k=0; k < ces.size(); k++) {
+						System.out.println(P +" -> " + V);
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
 						nodo_aux.add(V);
