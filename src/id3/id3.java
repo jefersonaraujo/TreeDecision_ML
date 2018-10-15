@@ -83,6 +83,10 @@ public class id3 {
 			System.out.println("Existem elementos diferentes !");
 			if(pr_aux.isEmpty()) {
 				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
+				for(int i =0; i < ces.size();i++) {
+				System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+				
+			}
 				
 			}else {
 				
@@ -105,7 +109,7 @@ public class id3 {
 							v_aux.add(ces.get(i).getHc());
 						}
 					}
-						System.out.println(v_aux.toString());
+						System.out.println("LISTA : " + v_aux.toString());
 
 					String V = v_aux.get(0);
 					System.out.println("Pego o primeiro = " + V );
