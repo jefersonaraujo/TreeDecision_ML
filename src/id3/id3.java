@@ -129,7 +129,7 @@ public class id3 {
 						}
 						
 					}//fim for
-					
+				//	System.out.println(P + "-->" + v_aux.get(0) + "---> " + ces.get(0).getRisco());
 					//continuacao para cada valor V de P				
 					for(int k=0; k < v_aux.size(); k++) {
 						//System.out.println(P +" -> " + v_aux.get(k));
