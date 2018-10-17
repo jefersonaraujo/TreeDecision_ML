@@ -79,7 +79,7 @@ public class id3 {
 //			}
 			
 
-		}else {
+		}else if(pr_aux.isEmpty()) {
 			System.out.println("Existem elementos diferentes !");
 			if(pr_aux.isEmpty()) {
 				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
