@@ -134,6 +134,7 @@ public class id3 {
 					for(int k=0; k < v_aux.size(); k++) {
 						//System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
+						
 						nodo_aux.add(P);
 						nodo_aux.add(V);
 						
@@ -210,6 +211,7 @@ public class id3 {
 					
 					//continuacao para cada valor V de P				
 					for(int k=0; k < v_aux.size(); k++) {
+						
 						//System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
 						nodo_aux.add(P);
