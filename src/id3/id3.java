@@ -81,16 +81,16 @@ public class id3 {
 
 		}else if(pr_aux.isEmpty()) {
 			System.out.println("Existem elementos diferentes !");
-			if(pr_aux.isEmpty()) {
+			///if(pr_aux.isEmpty()) {
 				System.out.println("Propriedades vazias !\n retornar no folha rotulado com a disjuncao de todas as classes no conjuto exemplo");
-				for(int i =0; i < ces.size();i++) {
-					//System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
-				///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+//				for(int i =0; i < ces.size();i++) {
+//					//System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
+//				///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+//				
+//			}
 				
 			}
-				
-			}else {
-				
+		else {		
 			
 				
 				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
@@ -272,6 +272,6 @@ public class id3 {
 		
 		
 		
-	}
+	///}
 	
 	
