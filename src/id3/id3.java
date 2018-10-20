@@ -15,8 +15,9 @@ public class id3 {
 	
 	public Tree tt = new Tree();
 	//public static List<String> PR = new ArrayList<String>(); 
-
 	
+
+
 	public static void main(String[] args) {
 		int id;
 		
@@ -91,176 +92,177 @@ public class id3 {
 				
 			}
 		else {		
-			
 				
-				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
-				String P = (String) pr_aux.get(0);
-				System.out.println("Selecionado a Propriedade. = " + P);
-				
-				pr_aux.remove(0);
-				
-				System.out.println("Propriedade Restantes da Lista  = " + pr_aux.toString());
-				List<String> v_aux = new ArrayList<String>();
-				List<Dados> particao_aux = new ArrayList<Dados>();
-				
-				if(P.equals("HC")) {
-					for(int i=0; i < ces.size(); i++) {	
-						//se não tiver ramos iguais adiciona no aux
-						if(!v_aux.contains(ces.get(i).getHc())) {
-							v_aux.add(ces.get(i).getHc());
-						}
-					}
-					
-					
-					System.out.println("LISTA : " + v_aux.toString());
-
-					String V = v_aux.get(0);
-					System.out.println("Pego o primeiro = " + V );
-					System.out.println(P + "-->" + v_aux.get(0));
-					
-					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
-					for(int i =0; i < ces.size();i++) {
-						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-						
-						if(ces.get(i).getHc().equals(V)){
-							//System.out.println(ces.get(i).getN());
-							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
-							particao_aux.add(ces.get(i));
-						}
-						
-					}//fim for
-				//	System.out.println(P + "-->" + v_aux.get(0) + "---> " + ces.get(0).getRisco());
-					//continuacao para cada valor V de P				
-					for(int k=0; k < v_aux.size(); k++) {
-						//System.out.println(P +" -> " + v_aux.get(k));
-						List<String> nodo_aux = new ArrayList<String>();
-						
-						nodo_aux.add(P);
-						nodo_aux.add(V);
-						
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
-					}
-					
-					
-					
-				} // fim IF
-
-				
-				if(P.equals("GA")) {
-					for(int i=0; i < ces.size(); i++) {	
-						//se não tiver ramos iguais adiciona no aux
-						if(!v_aux.contains(ces.get(i).getGarantia())) {
-							v_aux.add(ces.get(i).getGarantia());
-						}
-					}
-						System.out.println(v_aux.toString());
-
-					String V = v_aux.get(0);
-					System.out.println("Pego o primeiro = " + V );
-					System.out.println(P + "-->" + v_aux.get(0));
-					
-					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
-					for(int i =0; i < ces.size();i++) {
-						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-						
-						if(ces.get(i).getGarantia().equals(V)){
-							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "   + ces.get(i).getRenda() );
-							particao_aux.add(ces.get(i));
-						}
-						
-					}//fim for	
-					
-					//continuacao para cada valor V de P				
-					for(int k=0; k < v_aux.size(); k++) {
-						//System.out.println(P +" -> " + v_aux.get(k));
-						List<String> nodo_aux = new ArrayList<String>();
-						nodo_aux.add(P);
-						nodo_aux.add(V);
-						
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
-					}
-					
-					
-				} // fim IF
-				
-				if(P.equals("DI")) {
-					for(int i=0; i < ces.size(); i++) {	
-						//se não tiver ramos iguais adiciona no aux
-						if(!v_aux.contains(ces.get(i).getDivida())) {
-							v_aux.add(ces.get(i).getDivida());
-						}
-					}
-						System.out.println(v_aux.toString());
-
-					String V = v_aux.get(0);
-					System.out.println("Pego o primeiro = " + V );
-					System.out.println(P + "-->" + v_aux.get(0));
-					
-					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
-					for(int i =0; i < ces.size();i++) {
-						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-						
-						if(ces.get(i).getDivida().equals(V)){
-							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
-							particao_aux.add(ces.get(i));
-						}
-						
-					}//fim for	
-					
-					//continuacao para cada valor V de P				
-					for(int k=0; k < v_aux.size(); k++) {
-						
-						//System.out.println(P +" -> " + v_aux.get(k));
-						List<String> nodo_aux = new ArrayList<String>();
-						nodo_aux.add(P);
-						nodo_aux.add(V);
-						
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
-					}
-					
-					
-				} 
-				
-				
-				if(P.equals("RE")) {
-					for(int i=0; i < ces.size(); i++) {	
-						//se não tiver ramos iguais adiciona no aux
-						if(!v_aux.contains(ces.get(i).getRenda())) {
-							v_aux.add(ces.get(i).getRenda());
-						}
-					}
-						System.out.println(v_aux.toString());
-
-					String V = v_aux.get(0);
-					System.out.println("Pego o primeiro = " + V );
-					System.out.println(P + "-->" + v_aux.get(0));
-					
-					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
-					for(int i =0; i < ces.size();i++) {
-						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
-						
-						if(ces.get(i).getRenda().equals(V)){
-							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
-							particao_aux.add(ces.get(i));
-						}
-						
-					}//fim for	
-					
-					//continuacao para cada valor V de P				
-					for(int k=0; k < v_aux.size(); k++) {
-						//System.out.println(P +" -> " + v_aux.get(k));
-						List<String> nodo_aux = new ArrayList<String>();
-						nodo_aux.add(P);
-						nodo_aux.add(V);
-						
-						induzir_arvore(particao_aux, pr_aux,nodo_aux);
-					}
-					
-				} 
-				
+				 System.out.println(u.removePro(pr_aux));
+//				
+//				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
+//				String P = (String) pr_aux.get(0);
+//				System.out.println("Selecionado a Propriedade. = " + P);
+//				
+//				pr_aux.remove(0);
+//				
+//				System.out.println("Propriedade Restantes da Lista  = " + pr_aux.toString());
+//				List<String> v_aux = new ArrayList<String>();
+//				List<Dados> particao_aux = new ArrayList<Dados>();
+//				
+//				if(P.equals("HC")) {
+//					for(int i=0; i < ces.size(); i++) {	
+//						//se não tiver ramos iguais adiciona no aux
+//						if(!v_aux.contains(ces.get(i).getHc())) {
+//							v_aux.add(ces.get(i).getHc());
+//						}
+//					}
+//					
+//					
+//					System.out.println("LISTA : " + v_aux.toString());
+//
+//					String V = v_aux.get(0);
+//					System.out.println("Pego o primeiro = " + V );
+//					System.out.println(P + "-->" + v_aux.get(0));
+//					
+//					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
+//					for(int i =0; i < ces.size();i++) {
+//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+//						
+//						if(ces.get(i).getHc().equals(V)){
+//							//System.out.println(ces.get(i).getN());
+//							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
+//							particao_aux.add(ces.get(i));
+//						}
+//						
+//					}//fim for
+//				//	System.out.println(P + "-->" + v_aux.get(0) + "---> " + ces.get(0).getRisco());
+//					//continuacao para cada valor V de P				
+//					for(int k=0; k < v_aux.size(); k++) {
+//						//System.out.println(P +" -> " + v_aux.get(k));
+//						List<String> nodo_aux = new ArrayList<String>();
+//						
+//						nodo_aux.add(P);
+//						nodo_aux.add(v_aux.get(k));
+//						
+//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+//					}
+//					
+//					
+//					
+//				} // fim IF
+//
+//				
+//				if(P.equals("GA")) {
+//					for(int i=0; i < ces.size(); i++) {	
+//						//se não tiver ramos iguais adiciona no aux
+//						if(!v_aux.contains(ces.get(i).getGarantia())) {
+//							v_aux.add(ces.get(i).getGarantia());
+//						}
+//					}
+//						System.out.println(v_aux.toString());
+//
+//					String V = v_aux.get(0);
+//					System.out.println("Pego o primeiro = " + V );
+//					System.out.println(P + "-->" + v_aux.get(0));
+//					
+//					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
+//					for(int i =0; i < ces.size();i++) {
+//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+//						
+//						if(ces.get(i).getGarantia().equals(V)){
+//							//System.out.println(ces.get(i).getN());
+//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "   + ces.get(i).getRenda() );
+//							particao_aux.add(ces.get(i));
+//						}
+//						
+//					}//fim for	
+//					
+//					//continuacao para cada valor V de P				
+//					for(int k=0; k < v_aux.size(); k++) {
+//						//System.out.println(P +" -> " + v_aux.get(k));
+//						List<String> nodo_aux = new ArrayList<String>();
+//						nodo_aux.add(P);
+//						nodo_aux.add(v_aux.get(k));
+//						
+//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+//					}
+//					
+//					
+//				} // fim IF
+//				
+//				if(P.equals("DI")) {
+//					for(int i=0; i < ces.size(); i++) {	
+//						//se não tiver ramos iguais adiciona no aux
+//						if(!v_aux.contains(ces.get(i).getDivida())) {
+//							v_aux.add(ces.get(i).getDivida());
+//						}
+//					}
+//						System.out.println(v_aux.toString());
+//
+//					String V = v_aux.get(0);
+//					System.out.println("Pego o primeiro = " + V );
+//					System.out.println(P + "-->" + v_aux.get(0));
+//					
+//					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
+//					for(int i =0; i < ces.size();i++) {
+//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+//						
+//						if(ces.get(i).getDivida().equals(V)){
+//							//System.out.println(ces.get(i).getN());
+//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+//							particao_aux.add(ces.get(i));
+//						}
+//						
+//					}//fim for	
+//					
+//					//continuacao para cada valor V de P				
+//					for(int k=0; k < v_aux.size(); k++) {
+//						
+//						//System.out.println(P +" -> " + v_aux.get(k));
+//						List<String> nodo_aux = new ArrayList<String>();
+//						nodo_aux.add(P);
+//						nodo_aux.add(v_aux.get(k));
+//						
+//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+//					}
+//					
+//					
+//				} 
+//				
+//				
+//				if(P.equals("RE")) {
+//					for(int i=0; i < ces.size(); i++) {	
+//						//se não tiver ramos iguais adiciona no aux
+//						if(!v_aux.contains(ces.get(i).getRenda())) {
+//							v_aux.add(ces.get(i).getRenda());
+//						}
+//					}
+//						System.out.println(v_aux.toString());
+//
+//					String V = v_aux.get(0);
+//					System.out.println("Pego o primeiro = " + V );
+//					System.out.println(P + "-->" + v_aux.get(0));
+//					
+//					////contrua particao com os elementos de contunto exempo com valores V para propriedade P
+//					for(int i =0; i < ces.size();i++) {
+//						//System.out.println("Ramos de  "+ P +"  -> " +v_aux.get(i) + "   | " + ces.get(i).getRisco());
+//						
+//						if(ces.get(i).getRenda().equals(V)){
+//							//System.out.println(ces.get(i).getN());
+//							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+//							particao_aux.add(ces.get(i));
+//						}
+//						
+//					}//fim for	
+//					
+//					//continuacao para cada valor V de P				
+//					for(int k=0; k < v_aux.size(); k++) {
+//						//System.out.println(P +" -> " + v_aux.get(k));
+//						List<String> nodo_aux = new ArrayList<String>();
+//						nodo_aux.add(P);
+//						nodo_aux.add(v_aux.get(k));
+//						
+//						induzir_arvore(particao_aux, pr_aux,nodo_aux);
+//					}
+//					
+//				} 
+//				
 				
 				
 					
