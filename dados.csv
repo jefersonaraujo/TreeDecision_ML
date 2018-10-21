@@ -1,14 +1,14 @@
-1;alto;ruim;alta;nenhuma;0 a 15 mil
-2;alto;desconhecida;alta;nenhuma;15 a 35 mil
-3;moderado;desconhecida;baixa;nenhuma;15 a 35 mil
-4;alto;desconhecida;baixa;nenhuma;0 a 15 mil
-5;baixo;desconhecida;baixa;nenhuma;acima de 35 mil
-6;baixo;desconhecida;baixa;adequada;acima de 35 mil
-7;alto;ruim;baixa;nenhuma;0 a 15 mil
-8;moderado;ruim;baixa;adequada;acima de 35 mil
-9;baixo;boa;baixa;nenhuma;acima de 35 mil
-10;baixo;boa;alta;adequada;acima de 35 mil
-11;alto;boa;alta;nenhuma;0 a 15 mil
-12;moderado;boa;alta;nenhuma;15 a 35 mil
-13;baixo;boa;alta;nenhuma;acima de 35 mil
-14;alto;ruim;alta;nenhuma;15 a 35 mil
+1;alto;ruim;alta;nenhuma;0a15mil
+2;alto;desconhecida;alta;nenhuma;15a35mil
+3;moderado;desconhecida;baixa;nenhuma;15a35mil
+4;alto;desconhecida;baixa;nenhuma;0a15mil
+5;baixo;desconhecida;baixa;nenhuma;acimade35mil
+6;baixo;desconhecida;baixa;adequada;acimade35mil
+7;alto;ruim;baixa;nenhuma;0a15mil
+8;moderado;ruim;baixa;adequada;acimade35mil
+9;baixo;boa;baixa;nenhuma;acimade35mil
+10;baixo;boa;alta;adequada;acimade35mil
+11;alto;boa;alta;nenhuma;0a15mil
+12;moderado;boa;alta;nenhuma;15a35mil
+13;baixo;boa;alta;nenhuma;acimade35mil
+14;alto;ruim;alta;nenhuma;15a35mil
