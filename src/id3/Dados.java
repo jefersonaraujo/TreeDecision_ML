@@ -1,7 +1,7 @@
 package id3;
 
 public class Dados {
-    private String risco,hc,divida,garantia,renda;
+    private String risco,hc,divida,garantia,renda,coluna;
     private int N;
     
 	public String getRisco() {
@@ -50,6 +50,14 @@ public class Dados {
 
 	public void setRenda(String renda) {
 		this.renda = renda;
+	}
+
+	public String getColuna() {
+		return coluna;
+	}
+
+	public void setColuna(String coluna) {
+		this.coluna = coluna;
 	}
 
 }

@@ -50,14 +50,22 @@ public class Util {
 	
 	public List Propriedades() {
 		List<String> PR = new ArrayList<String>(); 
-		PR.add("HC");
-		PR.add("GA");		
-		PR.add("DI");
-		PR.add("RE");
+		PR.add("HCREDITO");
+		PR.add("GARANTIA");		
+		PR.add("DIVIDA");
+		PR.add("RENDA");
+		
 		return PR;
 		
 	}
-	
+	public String removePro(List prs) {
+		
+		return  (String) prs.remove(0);
+	}
+	public String removeV(List vs) {
+		
+		return  (String) vs.remove(0);
+	}
 	public List LerArquivo(String caminho) {
 		BufferedReader conteudoCSV = null;
 		String linha ="";
@@ -68,10 +76,13 @@ public class Util {
 		try {
 			conteudoCSV = new BufferedReader(new FileReader(caminho));
 			int i=1;
+			String aux;
+			
 			while ((linha = conteudoCSV.readLine()) !=null ) {
 				
-				String [] dados = linha.split(csvSeparadorCampo);
+				String[] dados = linha.split(csvSeparadorCampo);
 				Dados dt1 =  new Dados();
+				dt1.setColuna(dados[0]);
 				dt1.setN(i);
 				dt1.setRisco(dados[1]);
 				dt1.setHc(dados[2]);

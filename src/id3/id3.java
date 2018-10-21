@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class id3 {
 	
-	public Tree tt = new Tree();
+	///public Tree tt = new Tree();
 	//public static List<String> PR = new ArrayList<String>(); 
 	
 
@@ -44,41 +44,43 @@ public class id3 {
 		//PR.add("GA");
 	//	PR.add("RE");
 		//PR.add("DI");
-		
+		int id_no= 1;
+		int  id_pai= 0;
 		List PR;
 		PR = util.Propriedades();
 		System.out.println("Lista de PR inicial " + PR.toString());
 /***************************************************************************************************/		
 
 		///tree servirá para adicionar as arvores.
-		List<Tree> tree = new ArrayList<Tree>();
-
-		
+		List arvores = new ArrayList<String>();
+	
 		
 
 		
 	
-		induzir_arvore(listaDados, PR, null);	
+		arvores = induzir_arvore(listaDados, PR, null);	
+		System.out.println(arvores);
 	}
 
-	private static void induzir_arvore(List<Dados> ces, List pR, List valor) {
+	public static List induzir_arvore(List<Dados> ces, List pR, List valor) {
 /***************************************************************************************************/				
 		//chamar função comparar
 		Util u = new Util();
+		 
 		List<String> pr_aux = pR;
 		Boolean res=  u.CompararClasses(ces);
-		List PR;
-		PR = u.Propriedades();
+		List<String> arvore = new ArrayList<String>();
+		//PR = u.Propriedades();
 		
 /***************************************************************************************************/	
 		if(res) {
-			System.out.println("Todos Elementos de Classes iguais !\n Retornar um no folha rotulado com essa classe !!");
-			System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
+//			System.out.println("Todos Elementos de Classes iguais !\n Retornar um no folha rotulado com essa classe !!");
+//			System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
 //			for(int i =0; i < ces.size();i++) {
 //				System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 //				
 //			}
-			
+			return null;
 
 		}else if(pr_aux.isEmpty()) {
 			System.out.println("Existem elementos diferentes !");
@@ -93,7 +95,57 @@ public class id3 {
 			}
 		else {		
 				
-				 System.out.println(u.removePro(pr_aux));
+				String propriedade_atual= u.removePro(pr_aux);
+				 System.out.println(propriedade_atual);
+				 System.out.println("Propriedade Restantes da Lista  = " + pr_aux.toString());
+				 
+				
+					 if(propriedade_atual.equals("HCREDITO")) {
+						
+						 List<String> v_aux = new ArrayList<String>();
+							for(int i=0; i < ces.size(); i++) {	
+							//se não tiver ramos iguais adiciona no aux
+							if(!v_aux.contains(ces.get(i).getHc())) {
+								v_aux.add(ces.get(i).getHc());
+								}					
+							}
+							System.out.println(v_aux.toString());
+							
+							List<Dados> particao_aux = new ArrayList<Dados>();
+							for(int j=0; j<v_aux.size(); j++) {
+								u.removePro(pr_aux);
+								System.out.println("RAMO "+ propriedade_atual +" -> " + v_aux.get(j));
+								
+								if(ces.get(j).getHc().equals(v_aux.get(j))){
+									
+									//System.out.println(ces.get(i).getN());
+									System.out.println(ces.get(j).getN() + "     | " + ces.get(j).getRisco() + "     |" + ces.get(j).getHc() + "    | "  + ces.get(j).getDivida()  + "    | " + ces.get(j).getGarantia() + " | "  + ces.get(j) .getRenda());
+									particao_aux.add(ces.get(j));
+								}
+									
+//								
+								//arvore.add(propriedade_atual +" -> " + v_aux.get(j));
+							}
+							
+							return arvore;
+							
+						 
+					 }else if(propriedade_atual.equals("GARANTIA")) {						 
+						 
+						 
+					 
+					 }else if(propriedade_atual.equals("DIVIDA")) {
+						
+						 
+					 }else if(propriedade_atual.equals("RENDA")) {
+						
+					 }
+					 
+				 
+				 
+				 
+				
+				 
 //				
 //				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
 //				String P = (String) pr_aux.get(0);
@@ -267,6 +319,7 @@ public class id3 {
 				
 					
 				}
+		return null;
 				
 			}
 		}
