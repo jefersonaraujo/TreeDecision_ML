@@ -14,6 +14,9 @@ public class ArvoreInducao {
 
 	public static void main(String[] args) {
 		System.out.println("Here");
+		
+		Conexao.geConnection();
+		System.out.println(Conexao.ok);
 
 	}
 
