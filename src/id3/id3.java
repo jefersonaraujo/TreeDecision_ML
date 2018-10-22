@@ -25,8 +25,8 @@ public class id3 {
 		//System.out.println("hello world ! ");
 		//objetivo  ler um arquivo .csv e "montar" uma arvore de decicao 
 		
-		String csvArquivo ="C:\\Users\\ghost\\dados.csv";
-		//String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
+		//String csvArquivo ="C:\\Users\\ghost\\dados.csv";
+		String csvArquivo ="/ARQUIVOS/DEVELOP/TreeDecision_ML/dados.csv";
 		util.LerArquivo(csvArquivo);
 /***************************************************************************************************/
 		
