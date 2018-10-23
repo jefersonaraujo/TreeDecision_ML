@@ -1,6 +1,6 @@
 package id3;
 
-import java.beans.Statement;
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -21,7 +21,7 @@ public class Conexao {
 	try {
 		Class.forName(driver);
 		this.connection = DriverManager.getConnection(servidor, usuario, senha);
-
+		this.statement = (Statement) this.connection.createStatement();
 	
 	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
@@ -46,6 +46,22 @@ public class Conexao {
 		}
 		
 		
+	}
+	public void listarDados() {
+		try {
+			String query = "SELECT * FROM dados";
+			this.resultSet = this.statement.executeQuery(query);
+			this.statement = this.connection.createStatement();
+			ResultSetMetaData meta = this.resultSet.getMetaData();
+			for(int x =1; x <= meta.getColumnCount();x++) {
+				System.out.println(meta.getColumnName(x));
+			}
+			while(this.resultSet.next()) {
+				System.out.println("ID:" + this.resultSet.getString("id") +  "|" + this.resultSet.getString("RISCO")+  "|" + this.resultSet.getString("HCREDITO")+  "|" + this.resultSet.getString("DIVIDA") +  "|:" + this.resultSet.getString("RENDA"));
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 //	static String ok = null;

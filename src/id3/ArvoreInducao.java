@@ -18,6 +18,8 @@ public class ArvoreInducao {
 		bancoDeDados.conectar();
 		if(bancoDeDados.estaConectado()) {
 			System.out.println("Here");
+			bancoDeDados.listarDados();
+			
 		}else {
 			System.out.println("eroor");
 		}
