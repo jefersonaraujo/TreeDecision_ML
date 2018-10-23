@@ -13,10 +13,14 @@ public class ArvoreInducao {
     }
 
 	public static void main(String[] args) {
-		System.out.println("Here");
 		
-	Conexao bandoDeDados = new Conexao();
-
+		Conexao bancoDeDados = new Conexao();
+		bancoDeDados.conectar();
+		if(bancoDeDados.estaConectado()) {
+			System.out.println("Here");
+		}else {
+			System.out.println("eroor");
+		}
 	}
 
 }
