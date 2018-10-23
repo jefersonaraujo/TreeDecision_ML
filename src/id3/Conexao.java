@@ -11,6 +11,12 @@ public class Conexao {
 	private Connection connection = null;
 	private Statement statement = null;
 	private ResultSet resultSet = null;
+	public void conectar() {
+		String servidor = "jdbc:mysql://192.168.50.238:3306/id3";
+		String usuario = "root";
+		String senha = "test" ;
+		String driver =  "com.mysql.jdbc.Driver";
+	}
 	
 
 	static String ok = null;
