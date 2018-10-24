@@ -52,12 +52,7 @@ public class id3 {
 /***************************************************************************************************/		
 
 		///tree servirá para adicionar as arvores.
-		List arvores = new ArrayList<String>();
-	
-		
-
-		
-	
+		List arvores = new ArrayList<String>();	
 		arvores = induzir_arvore(listaDados, PR, null);	
 		System.out.println(arvores);
 	}
@@ -76,7 +71,8 @@ public class id3 {
 		if(res) {
 			System.out.println("Todos Elementos de Classes iguais !\n Retornar um no folha rotulado com essa classe !!");
 			System.out.println(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco() );
-			return null;
+			arvore.add(valor.get(0) + " --> " + valor.get(1) +  " --> " + ces.get(0).getRisco());
+			return arvore;
 
 		}else if(pr_aux.isEmpty()) {
 			System.out.println("Existem elementos diferentes !");
@@ -119,7 +115,7 @@ public class id3 {
 						
 						if(ces.get(i).getHc().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
+							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  + ces.get(i) .getRenda());
 							particao_aux.add(ces.get(i));
 						}
 						
@@ -161,7 +157,7 @@ public class id3 {
 						
 						if(ces.get(i).getGarantia().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "   + ces.get(i).getRenda() );
+						///	System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "   + ces.get(i).getRenda() );
 							particao_aux.add(ces.get(i));
 						}
 						
@@ -199,7 +195,7 @@ public class id3 {
 						
 						if(ces.get(i).getDivida().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 							particao_aux.add(ces.get(i));
 						}
 						
@@ -239,7 +235,7 @@ public class id3 {
 						
 						if(ces.get(i).getRenda().equals(V)){
 							//System.out.println(ces.get(i).getN());
-							System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
+							///System.out.println(ces.get(i).getN() + "     | " + ces.get(i).getRisco() + "     |" + ces.get(i).getHc() + "    | "  + ces.get(i).getDivida()  + "    | " + ces.get(i).getGarantia() + " | "  );
 							particao_aux.add(ces.get(i));
 						}
 						
@@ -261,7 +257,7 @@ public class id3 {
 				
 					
 				}
-		return null;
+		return arvore;
 				
 			}
 		}
