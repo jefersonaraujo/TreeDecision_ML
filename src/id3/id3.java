@@ -16,10 +16,10 @@ public class id3 {
 	///public Tree tt = new Tree();
 	//public static List<String> PR = new ArrayList<String>(); 
 	
-
+	public int id = 0;
 
 	public static void main(String[] args) {
-		int id;
+		
 		
 		Util util = new Util();
 		//System.out.println("hello world ! ");
@@ -65,6 +65,7 @@ public class id3 {
 		List<String> pr_aux = pR;
 		Boolean res=  u.CompararClasses(ces);
 		List<String> arvore = new ArrayList<String>();
+		List<String> v_aux = new ArrayList<String>();
 		//PR = u.Propriedades();
 		
 /***************************************************************************************************/	
@@ -87,11 +88,11 @@ public class id3 {
 				System.out.println("selecione uma propriedade P e a faca a raiz da arvore atual");
 				String P = (String) pr_aux.get(0);
 				System.out.println("Selecionado a Propriedade. = " + P);
-				
-				pr_aux.remove(0);
+				pR.remove(0);
+				//pr_aux.remove(0);
 				
 				System.out.println("Propriedade Restantes da Lista  = " + pr_aux.toString());
-				List<String> v_aux = new ArrayList<String>();
+				
 				List<Dados> particao_aux = new ArrayList<Dados>();
 				
 				if(P.equals("HCREDITO")) {
@@ -123,6 +124,7 @@ public class id3 {
 				
 					//continuacao para cada valor V de P				
 					for(int k=0; k < v_aux.size(); k++) {
+						
 						//System.out.println(P +" -> " + v_aux.get(k));
 						List<String> nodo_aux = new ArrayList<String>();
 						
